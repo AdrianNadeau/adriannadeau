@@ -1,4 +1,6 @@
-### Hi there 👋
+**AdrianNadeau/adriannadeau** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+
+This is used for my own profile and art work
 
 <!--
 **AdrianNadeau/adriannadeau** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
