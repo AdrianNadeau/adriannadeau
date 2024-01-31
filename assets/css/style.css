@@ -81,7 +81,6 @@ h6 {
   transition: all 0.5s;
   padding: 0 15px;
   background: #102036;
- 
   overflow-y: auto;
 }
 
@@ -245,7 +244,6 @@ h6 {
   height: 100vh;
   background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
-  opacity: 0.8;
 }
 
 #hero:before {
@@ -263,20 +261,18 @@ h6 {
   position: relative;
   z-index: 2;
   min-width: 300px;
-  margin-bottom: 30em;
 }
 
 #hero h1 {
   margin: 0 0 10px 0;
-  font-size: 40px;
+  font-size: 64px;
   font-weight: 700;
   line-height: 56px;
-  color: black;
-  padding-bottom: 0.5em;
+  color: #fff;
 }
 
 #hero p {
-  color: black;
+  color: #fff;
   margin-bottom: 50px;
   font-size: 26px;
   font-family: "Poppins", sans-serif;
@@ -330,7 +326,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #102036;
+  color: #173b6c;
 }
 
 .section-title h2::after {
@@ -354,7 +350,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: #102036;
+  color: #173b6c;
 }
 
 .about .content ul {
@@ -885,7 +881,7 @@ section {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #102036;
+  color: #173b6c;
 }
 
 .contact .info .email p {
@@ -1091,7 +1087,7 @@ section {
   bottom: 0;
   width: 300px;
   z-index: 9999;
-  background: #102036;
+  background: #040b14;
 }
 
 #footer .copyright {
