@@ -20,13 +20,11 @@ I am committed to leading an independent and purposeful life. As a sports fanati
 
 <div align="center">
  
- 🔭 I’m currently working on **Python Projects**
+ 🔭 I’m currently working on **Full Stack Development**
  
- 🌱 I’m currently learning **Digital Business & AI**
+💬 Ask me about **Javascript**
 
-💬 Ask me about **Python**
-
-⚡ Fun fact: **Octopuses have three hearts and blue blood!**
+📧 Email: adrian@adriannadeau.com
 
  </div>
 
