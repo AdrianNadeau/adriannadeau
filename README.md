@@ -1,18 +1,44 @@
-**AdrianNadeau/adriannadeau** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Khai+Duong!;" />
+</h1>
+<h3 align="center">Founder at AN Software Services Inc.</h3>
 
-This is used for my own profile and art work
 
-<!--
-**AdrianNadeau/adriannadeau** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<div align="center"> 
+  <a href="adrian@adriannadeau.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank" />
+  </a> 
+  <a href="https://www.linkedin.com/in/adriannadeau/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank" />
+  </a>
+</div>
 
-Here are some ideas to get you started:
+<br> 
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+I am a dynamic and forward-thinking individual with a profound passion for digital innovation, coupled with a deep sense of empathy and compassion for others.
+I am committed to leading an independent and purposeful life. As a sports fanatic, grateful husband, and dedicated father, I bring a unique blend of personal and professional experiences to my entrepreneurial journey.
+
+<div align="center">
+ 
+ 🔭 I’m currently working on **Python Projects**
+ 
+ 🌱 I’m currently learning **Digital Business & AI**
+
+💬 Ask me about **Python**
+
+⚡ Fun fact: **Octopuses have three hearts and blue blood!**
+
+ </div>
+
+<h2 align="center">⚒️ Languages-Frameworks-Tools ⚒️</h2>
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=html,css,vscode,github" />
+    <img src="https://skillicons.dev/icons?i=express,java,cs,mongodb,mysql,postgres,oracle" /><br>
+</div>
+
+<br/>
+
+<h2 align="center">📊 Github Stats 📊</h2>
+
+![Adrian Nadeau's GitHub Stats](https://github-readme-stats.vercel.app/api?username=AdrianNadeau&show_icons=true&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=AdrianNadeau&show_icons=true&theme=radical)
