@@ -1,5 +1,7 @@
-<h1 align="center">
-    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Adrian+Nadeau!;" />
+
+<h1 align="center" style="background-color:#272829">
+<!--     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Adrian+Nadeau!;" /> -->
+  <img src="https://www.adriannadeau.com/assets/img/adrian-nadeau-logo.png"/>
 </h1>
 <h3 align="center">Founder at AN Software Services Inc.</h3>
 
