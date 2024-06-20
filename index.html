@@ -20,6 +20,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Favicons -->
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
@@ -47,6 +48,7 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  
 </head>
 
 <body>
@@ -79,7 +81,7 @@
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           
           <li><a href="#testimonials" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Testimonials</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Let's Chat!</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -91,7 +93,16 @@
       <h1>AN Software Services</h1>
       
       <p><span class="typed" data-typed-items="I'm a Digital Independent Lifer.,I am dedicated to help you succeed!"></span></p>
-      <h2></h2>
+       <!-- Learn More Button -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">
+      <i class="bi bi-play"></i> How can I help you?
+  </button>
+    <!-- Calendly badge widget begin -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/adriannadeau/testing', text: 'Let\'s meet!', color: '#007bff', textColor: '#ffffff', branding: undefined }); }</script>
+<!-- Calendly badge widget end -->
+ 
     </div>
   </section><!-- End Hero -->
 
@@ -105,7 +116,7 @@
         <div class="row">
           <div class="section-title ">
           <h2>About Me</h2>
-          <iframe width="560" style="border-radius: 5px;" height="315" src="https://www.youtube.com/embed/OhXTb3sOaAE?si=3Krrc3UAEqRVWQgD" title="AN Software Services" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          
         </div>
           <div class="col-lg-4" data-aos="fade-right"  style="padding-top: 20px !important;">
             
@@ -483,6 +494,7 @@
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2807.9376742921654!2d-66.05773902331592!3d45.26927064642306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca7b37fe001f699%3A0xaf268c13baa69042!2s94%20Queen%20St%2C%20Saint%20John%2C%20NB%20E2L%201S4!5e0!3m2!1sen!2sca!4v1697652573066!5m2!1sen!2sca" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         
         </div>
 
       </div>
@@ -505,6 +517,23 @@
       </div>
     </div>
   </footer><!-- End  Footer -->
+   <!-- Modal Structure -->
+   <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="videoModalLabel">AN Software Services</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- YouTube Video iframe -->
+                <iframe id="videoIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -522,6 +551,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+ <!-- Custom JavaScript to load YouTube video on modal show -->
+ <script>
+  $(document).ready(function() {
+      var videoSrc = 'https://www.youtube.com/embed/OhXTb3sOaAE?si=3Krrc3UAEqRVWQgD'; // Replace with your YouTube video URL
+
+      $('#videoModal').on('shown.bs.modal', function () {
+          $('#videoIframe').attr('src', videoSrc);
+      });
+
+      $('#videoModal').on('hide.bs.modal', function () {
+          $('#videoIframe').attr('src', '');
+      });
+  });
+</script>
 </body>
 
 </html>

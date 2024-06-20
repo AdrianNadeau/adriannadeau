@@ -1,14 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Modal with YouTube Video</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Learn More Button -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#videoModal">
+        Learn More
+    </button>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3PF5SC2VMN"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Modal Structure -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="videoModalLabel">Video Title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- YouTube Video iframe -->
+                    <iframe id="videoIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
 
-  gtag('config', 'G-3PF5SC2VMN');
-</script>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<div style="width:920;">
-<iframe  width="920" height="1000"  src="https://MIurl.cc/DqO66ramI" frameborder=0>       
-</div>
+    <!-- Custom JavaScript to load YouTube video on modal show -->
+    <script>
+        $(document).ready(function() {
+            var videoSrc = 'https://www.youtube.com/embed/OhXTb3sOaAE?si=3Krrc3UAEqRVWQgD'; // Replace with your YouTube video URL
+
+            $('#videoModal').on('shown.bs.modal', function () {
+                $('#videoIframe').attr('src', videoSrc);
+            });
+
+            $('#videoModal').on('hide.bs.modal', function () {
+                $('#videoIframe').attr('src', '');
+            });
+        });
+    </script>
+</body>
+</html>
