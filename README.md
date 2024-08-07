@@ -1,7 +1,7 @@
 
 <h1 align="center" style="background-color:#272829">
 <!--     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Adrian+Nadeau!;" /> -->
-  <img src="https://www.adriannadeau.com/assets/img/adrian-nadeau-logo.png"/>
+  <img src="[https://www.adriannadeau.com/assets/img/adrian-nadeau-logo.png](https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FzmwyUGZDXbdplrVDB2v/media/6696cb6e686dfa954996645c.jpeg)"/>
 </h1>
 <h3 align="center">Founder at AN Software Services Inc.</h3>
 
