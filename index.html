@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-  .left-justified {
-  text-align: left;
-}
-</style>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -46,7 +42,7 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">support@ansoftwareservices.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 506 639 3357</span></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span> +1(506)703-5614</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="https://www.x.com/anadeau" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
@@ -57,15 +53,10 @@
       </div>
     </div><!-- End Top Bar -->
 
-    <div class="branding d-flex align-items-center">
+    <div class="branding d-flex ">
 
-      <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-         
-           <!-- <img src="assets/img/Unleashinginnovation-logo.png" class="img-fluid" alt="" style="width: 100%;height: auto;"> -->
-          <!-- <h1 class="sitename">A.N Software Services</h1> -->
-        </a>
+      <div class="container position-relative d-flex justify-content-between">
+        
       <nav class="navbar">
         <div class="why-box aos-init aos-animate">
           
@@ -83,14 +74,15 @@
                
               </ul>
             </li>
-            <!-- <li><a href="#doctors">Doctors</a></li> -->
+
+            <li><a href="https://itthoughtsadrian.wordpress.com/">Blog</a></li>
           
             <li><a href="#contact">Where?</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav> 
 
-        <a class="cta-btn d-none d-sm-block" href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation" target="_blank">Free Consultation</a>
+        <a class="cta-btn d-none d-sm-block" href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation" target="_blank" style="margin-bottom: 25px !important;">Free Consultation</a>
 
       </div>
 
@@ -112,23 +104,28 @@
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <img src="assets/img/Unleashinginnovation-logo.png" class="img-fluid" alt="" style="width: 100%;height: auto;">
+              <a href="index.html">
+  <img src="assets/img/Unleashinginnovation-logo.png" class="img-fluid" alt="A.N. Software Services Logo" style="width: 100%;height: auto;">
+</a>
+             
               <h3>Why Choose A.N Software Services?</h3>
               <p>
       
                <h3> We act as your full-time IT staff — so you can focus on growing your business. 
                </h3>
               <div class="text-center">
-                  <a href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation" target="_blank" class="more-btn">
-                    <span>Free Consultation</span> <i class="bi bi-chevron-right"></i>
-                    <br/>
-                    
-                  </a>
+                 
+                  
                 </div>
                 <div class="text-center">
-                  <img src="assets/img/home-page-left.png" class="img-fluid" alt="" style="width: 100%;height: auto;padding-top: 500px;">
+                  <a href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation"><img src="assets/img/home-page-left.png" class="img-fluid" alt="" style="width: 100%;height: auto;padding-top: 500px;"></a>
                 </div>
-              <!-- <img src="assets/img/home-page-left.png" class="img-fluid" alt="" style="width: 100%;height: auto; margin-top: 20px;"> -->
+                <img src="" class="img-fluid" alt="" style="width: 100%;height: auto;">
+                <div class="text-center">
+                  <a href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation"><img src="assets/img/free-consultation-button.png"  class="img-fluid" alt="" style="width: 100%;height: auto;padding-top: 380px;"></a>
+                </div>
+                 
+              
             </div>
             
           </div><!-- End Why Box -->
@@ -221,6 +218,7 @@
 
         <div class="row align-items-center">
           <div class="col-md-6">
+            
             <h2>About Us</h2>
 
           
@@ -467,7 +465,14 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script>  
+/
+document.querySelectorAll('.prevent-click').forEach(function(element) {
+    element.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
+});
+</script>
 </body>
 
 </html>
