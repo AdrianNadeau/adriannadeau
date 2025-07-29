@@ -1,7 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
-
 import React from "react";
+import { createRoot } from "react-dom/client";
 import "./assets/vendor/bootstrap/css/bootstrap.min.css";
 import "./assets/vendor/bootstrap-icons/bootstrap-icons.css";
 import "./assets/vendor/aos/aos.css";
@@ -146,4 +144,6 @@ const App = () => {
   );
 };
 
-export default App;
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);
