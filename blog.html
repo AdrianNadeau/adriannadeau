@@ -107,11 +107,11 @@
         <div class="row gy-5">
           <script>
             fetch('https://itthoughtsadrian.wordpress.com/wp-json/wp/v2/posts')
-          .then(response => response.json())
-          .then(posts => {
-            posts.forEach(post => {
-              console.log(post.title.rendered);
-            });
+            .then(response => response.json())
+            .then(posts => {
+              posts.forEach(post => {
+                console.log(post.title.rendered);
+              });
           });
           </script>
           
