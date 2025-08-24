@@ -24,9 +24,9 @@
   <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
+  <!-- Custome CSS Files -->
   <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="index-page">
@@ -85,6 +85,7 @@
               <a href="#"><span>AI Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
               <ul>
                 <li><a href="" target="_blank" rel="noopener noreferrer">Prompt Engineering</a></li>
+                <li><a href="" target="_blank" rel="noopener noreferrer">Midjourney</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">JasperAI</a></li>
                 <li><a href="#" target="_blank" rel="noopener noreferrer">DALL-E</a></li>
               </ul>
@@ -140,9 +141,23 @@
                     <br><br>
                     And now, you may be eligible for funding that covers up to 75% of your project costs through the TechImpact's 
                     <a href="https://www.techimpact.it/digitalboost" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Digital Boost 3.0 program</a>. 
-                    We'll guide you through the application process so you can access the support you need to modernize and grow with less financial strain.
+                    We'll guide you through the application process so you can access the support you need to modernize and grow with less financial strain.<br/> 
+                  <p>Apply for Funding</p>
+                  
                   </p>
-                </div>
+
+                 
+                  <p>
+                    <a
+                      
+                      href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="margin-bottom: 25px;"
+                    >
+                      
+                    </a>
+                  </p>
                 
                 <div class="col-xl-12 d-flex align-items-stretch">
                   <div style="text-align: left;" class="col-xl-12">
@@ -180,6 +195,7 @@
                             Funding Opportunities:
                           </strong>
                           <span style="margin-left: 5px;font-weight: 300;">Potential coverage for up to 75% of costs via Digital Boost 3.0.</span>
+                          <a class="cta-btn d-none d-sm-block" href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation" target="_blank" rel="noopener noreferrer" style="margin-bottom: 25px;">Apply for Funding</a>
                         </div>
                          <div style="margin-bottom: 20px;">
                           <strong>
@@ -344,5 +360,18 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 </body>
-
+ <script>
+  (async () => {
+      try {
+        const url = 'http://localhost:3000/html?file=index.html'; // server will return the HTML
+        const resp = await fetch(url);
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const html = await resp.text();
+        console.log('Fetched HTML length:', html.length);
+        // If you expect JSON replace above .text() with .json()
+      } catch (err) {
+        console.error('Failed to fetch:', err);
+      }
+    })();
+</script>
 </html>
