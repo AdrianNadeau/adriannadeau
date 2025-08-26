@@ -142,23 +142,18 @@
                     And now, you may be eligible for funding that covers up to 75% of your project costs through the TechImpact's 
                     <a href="https://www.techimpact.it/digitalboost" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Digital Boost 3.0 program</a>. 
                     We'll guide you through the application process so you can access the support you need to modernize and grow with less financial strain.<br/> 
-                  <p>Apply for Funding</p>
-                  
-                  </p>
-
-                 
                   <p>
                     <a
-                      
+                      class="cta-btn d-none d-sm-block text-center"
                       href="https://bookmenow.info/book/MCAL-d18533fd-bfb1-4dba-8d2d-284780624f0a/free-consulation"
                       target="_blank"
-                      rel="noopener noreferrer"
-                      style="margin-bottom: 25px;"
+                      rel="noopener noreferrer" data-bs-toggle="modal" data-bs-target="#surveyModal"
+                      style="margin-bottom:25px; background:#102037; color:#fff; padding:10px 18px; border-radius:999px; text-decoration:none; display:inline-block; box-shadow:0 2px 6px rgba(13,110,253,0.18);"
                     >
-                      
-                    </a>
-                  </p>
-                
+                    Apply for Funding
+                  </a>
+                </p>
+                  
                 <div class="col-xl-12 d-flex align-items-stretch">
                   <div style="text-align: left;" class="col-xl-12">
                     <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
@@ -232,6 +227,24 @@
           </div>
         </div>
       </div>
+      <!-- Modal -->
+<div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="surveyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="surveyModalLabel">Digital Boost Eligibility Survey</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Typeform Embed -->
+        <div data-tf-live="01K3H981DY88GYJZ5WZVRVSR18" style="height:600px; width:100%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Typeform Embed Script -->
+<script src="//embed.typeform.com/next/embed.js"></script>
     </section>
 
     <!-- About Section -->
@@ -307,10 +320,20 @@
           </div>
 
           <div class="col-lg-8">
-            <iframe style="border: 0; width: 100%; height: 270px;" 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d360424.321092967!2d-66.37146996242912!3d45.109817921458706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ca7c50d1ef9f977%3A0xf08156072617d267!2sSaint%20John%2C%20NB!5e0!3m2!1sen!2sca!4v1739489749174!5m2!1sen!2sca"
-              frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+            <div class="modal fade" id="surveyModal" tabindex="-1" aria-labelledby="surveyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="surveyModalLabel">Digital Boost Eligibility Survey</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <!-- container where iframe will be injected -->
+                  <div id="typeformContainer" style="height:600px; width:100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -335,7 +358,7 @@
         </div>
       </div>
     </div>
-
+<div data-tf-live="01K3H981DY88GYJZ5WZVRVSR18"></div><script src="//embed.typeform.com/next/embed.js"></script>
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">A.N Software Services</strong> <span>All Rights Reserved</span></p>
     </div>
@@ -363,15 +386,46 @@
  <script>
   (async () => {
       try {
-        const url = 'http://localhost:3000/html?file=index.html'; // server will return the HTML
+        const url = 'http://localhost:3000/html?file=index.html';
         const resp = await fetch(url);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         const html = await resp.text();
-        console.log('Fetched HTML length:', html.length);
+        console.log('Fetched HTML length:', html);
         // If you expect JSON replace above .text() with .json()
       } catch (err) {
         console.error('Failed to fetch:', err);
       }
     })();
+</script>
+<!-- Typeform Embed Script -->
+<script src="//embed.typeform.com/next/embed.js"></script>
+
+<script>
+  (function () {
+    const modalEl = document.getElementById('surveyModal');
+    const container = document.getElementById('typeformContainer');
+    let iframeInserted = false;
+    const typeformSrc = 'https://form.typeform.com/to/01K3H981DY88GYJZ5WZVRVSR18'; // adjust if you have a different Typeform URL
+
+    modalEl.addEventListener('shown.bs.modal', function () {
+      // insert iframe once
+      if (iframeInserted) return;
+      const iframe = document.createElement('iframe');
+      iframe.src = typeformSrc;
+      iframe.style.border = '0';
+      iframe.style.width = '100%';
+      iframe.style.height = '600px';
+      iframe.setAttribute('allow', 'camera; microphone; autoplay; encrypted-media;');
+      container.appendChild(iframe);
+      iframeInserted = true;
+    });
+
+    // optional: remove iframe when modal hidden if you want fresh load each time
+    modalEl.addEventListener('hidden.bs.modal', function () {
+      // Uncomment to remove iframe on close:
+      // container.innerHTML = '';
+      // iframeInserted = false;
+    });
+  })();
 </script>
 </html>
