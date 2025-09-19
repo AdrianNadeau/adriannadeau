@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "axios": "^1.12.2",
+    "cheerio": "^1.1.2",
+    "fs": "^0.0.1-security",
+    "json2csv": "^6.0.0-alpha.2",
+    "puppeteer": "^24.22.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
@@ -15,6 +20,9 @@
   "description": "<h1 align=\"center\" style=\"background-color:#272829\">\r <!--     <img src=\"https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Hi+There!+👋;+I'm+Adrian+Nadeau!;\" /> -->\r   <img src=\"[https://www.adriannadeau.com/assets/img/adrian-nadeau-logo.png](https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/FzmwyUGZDXbdplrVDB2v/media/6696cb6e686dfa954996645c.jpeg)\"/>\r </h1>\r <h3 align=\"center\">Founder at AN Software Services Inc.</h3>",
   "main": "server.js",
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Adrian Nadeau",
+  "license": "MIT",
+  "directories": {
+    "doc": "docs"
+  }
 }

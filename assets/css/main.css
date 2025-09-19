@@ -1746,3 +1746,25 @@ font-size: 1.5em;
 .starter-section {
   /* Add your styles here */
 }
+/* ...existing code... */
+
+/* Ensure navbar dropdowns sit above offcanvas and other overlays */
+.navbar,
+.navbar .navbar-collapse { position: relative; z-index: 2050; }
+
+/* Make dropdown menus topmost */
+.dropdown-menu {
+  position: absolute;
+  z-index: 3050 !important;
+}
+
+/* Submenu flyouts */
+.dropdown-submenu .dropdown-menu {
+  left: 100%;
+  top: 0;
+  z-index: 3060 !important;
+}
+
+/* Keep offcanvas/backdrop under dropdowns */
+.offcanvas { z-index: 1040 !important; }
+.offcanvas-backdrop { z-index: 1030 !important; }
