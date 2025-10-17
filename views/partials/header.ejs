@@ -1,0 +1,61 @@
+<header class="wrapper bg-soft-primary">
+  <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none" style="background-color: #102037;">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo on the left -->
+      <div class="navbar-brand">
+        <a href="/">
+          <img src="/assets/img/Unleashinginnovation-logo.png" 
+               srcset="/assets/img/Unleashinginnovation-logo.png 2x" 
+               alt="A.N. Software Services" 
+               style="width: 300px; height: auto;" />
+        </a>
+      </div>
+
+      <!-- Navbar menu on the right (desktop) -->
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Products
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+              <li><a class="dropdown-item" href="https://smbbusiness.pro/" target="_blank" rel="noopener noreferrer">SMB Business Pro</a></li>
+              <li><a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">HotLead (coming soon)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+              <li><a class="dropdown-item" href="#prompt-engineering">Prompt Engineering</a></li>
+              <li><a class="dropdown-item" href="#ai-services">AI Services</a></li>
+              <li><a class="dropdown-item" href="#cloud-services">Cloud Services</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://itthoughtsadrian.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Additional nav icons -->
+        <ul class="navbar-nav flex-row align-items-center ms-3">
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
+          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i class="uil uil-search"></i></a></li>
+          <li class="nav-item d-lg-none">
+            <button class="hamburger offcanvas-nav-btn"><span></span></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

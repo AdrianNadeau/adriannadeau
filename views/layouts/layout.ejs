@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title><%= title %></title>
+  <meta name="description" content="<%= description %>">
+  <% if (typeof keywords !== 'undefined') { %>
+  <meta name="keywords" content="<%= keywords %>">
+  <% } %>
+  <link rel="shortcut icon" href="/assets/img/favicon.png">
+  <link rel="stylesheet" href="/assets/css/plugins.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  
+  <style>
+    html { scroll-behavior: smooth; }
+    /* keep header above slides */
+    .navbar.position-absolute { z-index: 1000; }
+    /* push the slider down so header doesn't visually crop the top */
+    .wrapper.bg-dark { padding-top: 80px; }
+    /* make Swiper and every slide fill the wrapper height */
+    .swiper-container,
+    .swiper,
+    .swiper .swiper-wrapper,
+    .swiper .swiper-slide {
+      height: 100%;
+      min-height: 480px;
+    }
+    /* vertically center slide content */
+    .swiper .swiper-slide .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    /* ensure background images cover slides */
+    .swiper-slide.bg-image {
+      background-size: cover;
+      background-position: center;
+    }
+    /* responsive tweak if header taller on mobile */
+    @media (max-width: 991px) {
+      .wrapper.bg-dark { padding-top: 100px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content-wrapper">
+    <%- include('../partials/header') %>
+    
+    <%- body %>
+    
+    <%- include('../partials/footer') %>
+  </div>
+
+  <div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+  </div>
+
+  <script src="/assets/js/plugins.js"></script>
+  <script src="/assets/js/theme.js"></script>
+</body>
+
+</html>
