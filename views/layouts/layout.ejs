@@ -3,46 +3,19 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title><%= title %></title>
-  <meta name="description" content="<%= description %>">
-  <% if (typeof keywords !== 'undefined') { %>
-  <meta name="keywords" content="<%= keywords %>">
-  <% } %>
-  <link rel="shortcut icon" href="/assets/img/favicon.png">
-  <link rel="stylesheet" href="/assets/css/plugins.css">
-  <link rel="stylesheet" href="/assets/css/style.css">
-  
-  <style>
-    html { scroll-behavior: smooth; }
-    /* keep header above slides */
-    .navbar.position-absolute { z-index: 1000; }
-    /* push the slider down so header doesn't visually crop the top */
-    .wrapper.bg-dark { padding-top: 80px; }
-    /* make Swiper and every slide fill the wrapper height */
-    .swiper-container,
-    .swiper,
-    .swiper .swiper-wrapper,
-    .swiper .swiper-slide {
-      height: 100%;
-      min-height: 480px;
-    }
-    /* vertically center slide content */
-    .swiper .swiper-slide .container {
-      height: 100%;
-      display: flex;
-      align-items: center;
-    }
-    /* ensure background images cover slides */
-    .swiper-slide.bg-image {
-      background-size: cover;
-      background-position: center;
-    }
-    /* responsive tweak if header taller on mobile */
-    @media (max-width: 991px) {
-      .wrapper.bg-dark { padding-top: 100px; }
-    }
-  </style>
+ 
+
+  <title><%= title || 'A.N. Software Services: Your Growth Partner — Not Just Your IT Team | A.N. Software Services.' %></title>
+  <meta name="description" content="A.N. Software Services delivers personalized IT, AI, and custom software solutions for SMBs. We act as your full-time IT staff — so you can focus on growing your business.">
+  <meta name="keywords" content="custom software development, AI integration, IT support services, SMB IT services, API integration experts, full-time IT team">
+
+  <link rel="shortcut icon" href="./assets/img/favicon.png">
+  <link rel="stylesheet" href="./assets/css/plugins.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/colors/violet.css">
+  <link rel="preload" href="./assets/css/fonts/thicccboi.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
 </head>
 
 <body>
@@ -54,14 +27,157 @@
     <%- include('../partials/footer') %>
   </div>
 
+  
   <div class="progress-wrap">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
       <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
     </svg>
   </div>
 
-  <script src="/assets/js/plugins.js"></script>
-  <script src="/assets/js/theme.js"></script>
+  <!-- load plugins.js then theme.js once, then safely init -->
+  <script>
+  (function(){
+    if (window.__assetsLoaderStarted) return;
+    window.__assetsLoaderStarted = true;
+    function loadScript(src, cb){
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = false;
+      s.onload = cb || function(){};
+      s.onerror = function(){ console.error('Failed to load', src); cb && cb(); };
+      document.body.appendChild(s);
+    }
+    loadScript('/assets/js/plugins.js', function(){
+      loadScript('/assets/js/theme.js', function(){
+        (function safeInit(retries){
+          retries = retries || 0;
+          if (window.__themeInited) return;
+          if (window.theme && typeof window.theme.init === 'function') {
+            try { window.theme.init(); window.__themeInited = true; } catch(e){ console.error('theme.init error', e); }
+            return;
+          }
+          if (retries < 20) setTimeout(function(){ safeInit(retries + 1); }, 200);
+          else console.warn('theme.init not available after retries');
+        })();
+      });
+    });
+  })();
+  
+  // Function to load background images
+  function loadBackgroundImages() {
+    const slides = document.querySelectorAll('.swiper-slide[data-image-src]');
+    slides.forEach(function(slide) {
+      const imageSrc = slide.getAttribute('data-image-src');
+      if (imageSrc) {
+        slide.style.backgroundImage = `url('${imageSrc}')`;
+        slide.style.backgroundSize = 'cover';
+        slide.style.backgroundPosition = 'center';
+        slide.style.backgroundRepeat = 'no-repeat';
+        console.log('Background image loaded:', imageSrc);
+      }
+    });
+  }
+  
+  // Load background images immediately
+  loadBackgroundImages();
+  
+  // Simple and fast Swiper initialization
+  setTimeout(function() {
+    console.log('Starting Swiper initialization...');
+    
+    // Load background images again before Swiper init
+    loadBackgroundImages();
+    
+    // Remove any existing swiper classes that might conflict
+    const swiperContainer = document.querySelector('.swiper-hero');
+    if (swiperContainer) {
+      swiperContainer.classList.remove('swiper-container-initialized');
+      swiperContainer.classList.remove('swiper-container-horizontal');
+    }
+    
+    const swiperEl = document.querySelector('.swiper-hero .swiper');
+    if (swiperEl) {
+      // Destroy existing instance if any
+      if (swiperEl.swiper) {
+        swiperEl.swiper.destroy(true, true);
+      }
+      
+      // Clear any inline styles but preserve background images
+      const wrapper = swiperEl.querySelector('.swiper-wrapper');
+      if (wrapper) {
+        wrapper.style.transform = '';
+        wrapper.style.transitionDuration = '';
+      }
+      
+      // Load background images one more time
+      loadBackgroundImages();
+      
+      // Simple, reliable Swiper initialization
+      if (window.Swiper) {
+        const swiper = new window.Swiper(swiperEl, {
+          // Basic settings
+          loop: true,
+          speed: 800,
+          autoplay: {
+            delay: 7000,
+            disableOnInteraction: false,
+          },
+          // Navigation
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          // Pagination
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          // Simple slide settings
+          slidesPerView: 1,
+          spaceBetween: 0,
+          centeredSlides: false,
+          // Enable touch
+          allowTouchMove: true,
+          // Simplified callbacks to prevent glitching
+          on: {
+            init: function() {
+              console.log('✅ Swiper initialized successfully');
+              // Add initialized class to show slider smoothly
+              const swiperContainer = document.querySelector('.swiper-hero');
+              if (swiperContainer) {
+                swiperContainer.classList.add('swiper-initialized');
+              }
+              // Ensure background images are loaded after init
+              setTimeout(loadBackgroundImages, 100);
+            },
+            slideChange: function() {
+              console.log('Slide changed to:', this.activeIndex);
+              // Reload background images after slide change
+              setTimeout(loadBackgroundImages, 50);
+            }
+          }
+        });
+        
+        console.log('Swiper instance created:', swiper);
+      } else {
+        console.error('❌ Swiper library not available');
+      }
+    } else {
+      console.error('❌ Swiper element not found');
+    }
+  }, 1500);
+
+  </script>
+  <script
+    src="https://cdn.apigateway.co/webchat-client..prod/sdk.js"
+    data-widget-id="2a170396-c9e5-11ef-bb9c-9ebc756ce056"
+    defer>
+  </script>
+</body>
+
+</html>
+
+  
 </body>
 
 </html>

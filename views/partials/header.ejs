@@ -1,61 +1,86 @@
-<header class="wrapper bg-soft-primary">
-  <nav class="navbar navbar-expand-lg center-nav transparent position-absolute navbar-dark caret-none" style="background-color: #102037;">
-    <div class="container d-flex justify-content-between align-items-center">
-      <!-- Logo on the left -->
-      <div class="navbar-brand">
-        <a href="/">
-          <img src="/assets/img/Unleashinginnovation-logo.png" 
-               srcset="/assets/img/Unleashinginnovation-logo.png 2x" 
-               alt="A.N. Software Services" 
-               style="width: 300px; height: auto;" />
-        </a>
-      </div>
-
-      <!-- Navbar menu on the right (desktop) -->
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link <%= currentPage === 'home' ? 'active' : '' %>" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Products
+ <header class="wrapper bg-soft-primary">
+      <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
+        <div class="container flex-lg-row flex-nowrap align-items-center">
+          <div class="navbar-brand w-100">
+            <a href="/">
+              <h3 class="text-black fs-30 mb-0">A.N. Software Services</h3>
             </a>
-            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-              <li><a class="dropdown-item" href="https://smbbusiness.pro/" target="_blank" rel="noopener noreferrer">SMB Business Pro</a></li>
-              <li><a class="dropdown-item" href="#" target="_blank" rel="noopener noreferrer">HotLead (coming soon)</a></li>
+          </div>
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+            <div class="offcanvas-header d-lg-none">
+              <h3 class="text-white fs-30 mb-0">A.N. Software Services</h3>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column h-100">
+              <ul class="navbar-nav" style="margin-left: auto;">
+                <li class="nav-item dropdown dropdown-mega">
+                  <a class="nav-link " href="/">Home</a>
+                
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="/#about">About</a>
+                  
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Projects</a>
+                  <div class="dropdown-menu dropdown-lg">
+                    <div class="dropdown-lg-content">
+                      <div>
+                        <h6 class="dropdown-header">Projects</h6>
+                        <ul class="list-unstyled">
+                          <li><a class="dropdown-item" href="./projects.html">SMB Business Pro</a></li>
+                          <li><a class="dropdown-item" href="./projects2.html">LeadGen365 (coming soon)</a></li>
+                          <li><a class="dropdown-item" href="./projects3.html">GratitudeToday.org</a></li>
+                          <li><a class="dropdown-item" href="./projects4.html">Fantasy Football Feeder</a></li>
+                        </ul>
+                      </div>
+                      <!-- /.column -->
+                    
+                    </div>
+                    <!-- /auto-column -->
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" >Blog</a>
+                 
+                </li>
+                 <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" >Contact</a>
+                 
+                </li>
+                
+              </ul>
+              <!-- /.navbar-nav -->
+              <div class="offcanvas-footer d-lg-none">
+                <div>
+                  <a href="mailto:hello@ansoftwareservices.com" class="link-inverse">hello@ansoftwareservices.com</a>
+                  <br /> 01+(506) 639-3357 <br />
+                  <!-- <nav class="nav social social-white mt-4">
+                    <a href="#"><i class="uil uil-twitter"></i></a>
+                    <a href="#"><i class="uil uil-facebook-f"></i></a>
+                    <a href="#"><i class="uil uil-dribbble"></i></a>
+                    <a href="#"><i class="uil uil-instagram"></i></a>
+                    <a href="#"><i class="uil uil-youtube"></i></a>
+                  </nav> -->
+                  <!-- /.social -->
+                </div>
+              </div>
+              <!-- /.offcanvas-footer -->
+            </div>
+            <!-- /.offcanvas-body -->
+          </div>
+          <!-- /.navbar-collapse -->
+          <div class="navbar-other w-100 d-flex ms-auto">
+            <ul class="navbar-nav flex-row align-items-center ms-auto">
+              <li class="nav-item d-lg-none">
+                <button class="hamburger offcanvas-nav-btn"><span></span></button>
+              </li>
             </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Services
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-              <li><a class="dropdown-item" href="#prompt-engineering">Prompt Engineering</a></li>
-              <li><a class="dropdown-item" href="#ai-services">AI Services</a></li>
-              <li><a class="dropdown-item" href="#cloud-services">Cloud Services</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://itthoughtsadrian.wordpress.com/" target="_blank" rel="noopener noreferrer">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-
-        <!-- Additional nav icons -->
-        <ul class="navbar-nav flex-row align-items-center ms-3">
-          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-info"><i class="uil uil-info-circle"></i></a></li>
-          <li class="nav-item"><a class="nav-link" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-search"><i class="uil uil-search"></i></a></li>
-          <li class="nav-item d-lg-none">
-            <button class="hamburger offcanvas-nav-btn"><span></span></button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</header>
+            <!-- /.navbar-nav -->
+          </div>
+          <!-- /.navbar-other -->
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navbar -->
+    </header>
