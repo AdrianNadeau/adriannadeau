@@ -18,7 +18,32 @@
                 
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link" href="/#about">About</a>
+              <a class="nav-link" href="#whatwedo" id="nav-whatwedo">About</a>
+<script>
+// Smooth scroll and slide-down for What We Do
+document.addEventListener('DOMContentLoaded', function() {
+  var navWhatWeDo = document.getElementById('nav-whatwedo');
+  var whatWeDo = document.getElementById('whatwedo');
+  if (navWhatWeDo && whatWeDo) {
+    navWhatWeDo.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Slide down effect
+      whatWeDo.style.transition = 'none';
+      whatWeDo.style.opacity = 0;
+      whatWeDo.style.transform = 'translateY(-40px)';
+      whatWeDo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(function() {
+        whatWeDo.style.transition = 'opacity 0.6s, transform 0.6s';
+        whatWeDo.style.opacity = 1;
+        whatWeDo.style.transform = 'translateY(0)';
+      }, 300);
+      setTimeout(function() {
+        whatWeDo.style.transition = '';
+      }, 1000);
+    });
+  }
+});
+</script>
                   
                 </li>
                 <li class="nav-item dropdown">
@@ -40,8 +65,22 @@
                     <!-- /auto-column -->
                   </div>
                 </li>
+                 <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" >Services</a>
+                 
+                </li>
+                <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Services
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                  <li><a class="dropdown-item" href="/prompt-eng">Prompt Engineering</a></li>
+                  <li><a class="dropdown-item" href="/ai-services">AI Services</a></li>
+                  <li><a class="dropdown-item" href="/cloud-services">Cloud Services</a></li>
+                </ul> -->
+              </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" >Blog</a>
+                  <a class="nav-link" href="https://itthoughtsadrian.wpcomstaging.com/2025/10/23/unlock-growth-with-innovative-funding-models-for-it-investments/" target="_blank">Blog</a>
                  
                 </li>
                  <li class="nav-item dropdown">
