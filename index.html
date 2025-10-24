@@ -24,48 +24,64 @@
      <header class="wrapper bg-soft-primary">
       <nav class="navbar navbar-expand-lg center-nav transparent navbar-light">
         <div class="container flex-lg-row flex-nowrap align-items-center">
-          <div class="navbar-brand w-100">
-            <a href="/">
+          <div class="navbar-brand">
+            <a href="./index.html">
               <h3 class="text-black fs-30 mb-0">A.N. Software Services</h3>
             </a>
           </div>
-          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+          <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start w-100" style="flex:1 1 0%;">
             <div class="offcanvas-header d-lg-none">
               <h3 class="text-white fs-30 mb-0">A.N. Software Services</h3>
               <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column h-100">
-              <ul class="navbar-nav" style="margin-left: auto;">
+              <ul class="navbar-nav ms-auto d-flex justify-content-end" style="margin-left:auto;padding-left: 25% !important;">
                 <li class="nav-item dropdown dropdown-mega">
-                  <a class="nav-link " href="/">Home</a>
+                  <a class="nav-link " href="./index.html">Home</a>
                 
                 </li>
                 
               <li><a class="nav-link" href="#whyus" id="nav-whyus">Why Us?</a></li>
               <li><a class="nav-link" href="#whatwedo" id="nav-whatwedo">What We Do</a></li>
               <script>
-              // Smooth scroll and slide-down for What We Do
+              // Smooth scroll for Why Us?, What We Do, and Services
               document.addEventListener('DOMContentLoaded', function() {
+                var navWhyUs = document.getElementById('nav-whyus');
                 var navWhatWeDo = document.getElementById('nav-whatwedo');
-                var whatWeDo = document.getElementById('whatwedo');
-                if (navWhatWeDo && whatWeDo) {
+                var navServices = document.getElementById('nav-services');
+                // Why Us? scrolls to Why Choose Us?
+                var whyChooseUs = Array.from(document.querySelectorAll('span.underline-3')).find(function(el) {
+                  return el.textContent.trim() === 'Why Choose Us?';
+                });
+                if (navWhyUs && whyChooseUs) {
+                  navWhyUs.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    whyChooseUs.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  });
+                }
+                // What We Do scrolls to Our Services
+                var ourServices = Array.from(document.querySelectorAll('span.underline-3')).find(function(el) {
+                  return el.textContent.trim() === 'Our Services';
+                });
+                if (navWhatWeDo && ourServices) {
                   navWhatWeDo.addEventListener('click', function(e) {
                     e.preventDefault();
-                    // Slide down effect
-                    whatWeDo.style.transition = 'none';
-                    whatWeDo.style.opacity = 0;
-                    whatWeDo.style.transform = 'translateY(-40px)';
-                    setTimeout(function() {
-                      whatWeDo.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                      setTimeout(function() {
-                        whatWeDo.style.transition = 'opacity 0.7s, transform 0.7s';
-                        whatWeDo.style.opacity = 1;
-                        whatWeDo.style.transform = 'translateY(0)';
-                      }, 100);
-                      setTimeout(function() {
-                        whatWeDo.style.transition = '';
-                      }, 900);
-                    }, 10);
+                    ourServices.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  });
+                }
+                // Services scrolls to Our Services
+                if (navServices && ourServices) {
+                  navServices.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    ourServices.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  });
+                }
+                // Arrow up smooth scroll to top
+                var progressWrap = document.querySelector('.progress-wrap');
+                if (progressWrap) {
+                  progressWrap.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                   });
                 }
               });
@@ -92,7 +108,7 @@
                   </div>
                 </li>
                  <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" >Services</a>
+                  <a class="nav-link" href="#" id="nav-services">Services</a>
                  
                 </li>
                 <!-- <li class="nav-item dropdown">
@@ -354,11 +370,13 @@
   <script>
     // Overlay bullet points data
     const overlayBullets = [
-      { icon: '<i class="uil uil-trophy" style="color:#2979FF;"></i>', text: 'Performance-First Model: We get paid when you\'re happy with the results: Win/Win.' },
-      { icon: '<i class="uil uil-dollar-sign" style="color:#FFD600;"></i>', text: 'Low or No Upfront Costs: Keep your cash flow free for other priorities.' },
-      { icon: '<i class="uil uil-gift" style="color:#00C853;"></i>', text: 'Funding Opportunities: Potential coverage for up to 75% of costs via Digital Boost 3.0.' },
-      { icon: '<i class="uil uil-award" style="color:#6f42c1;"></i>', text: '20+ Years of Experience in IT: Delivering solutions across multiple industries and challenges.' },
-      { icon: '<i class="uil uil-rocket" style="color:#FF9100;"></i>', text: 'End-to-End Execution: From planning to delivery, we\'ve got you covered.' }
+  { icon: '<i class="uil uil-trophy" style="color:#2979FF;"></i>', text: 'Performance-First Model: We get paid when you\'re happy with the results: Win/Win.' },
+  { icon: '<i class="uil uil-dollar-sign" style="color:#FFD600;"></i>', text: 'Low or No Upfront Costs: Keep your cash flow free for other priorities.' },
+  { icon: '<i class="uil uil-gift" style="color:#00C853;"></i>', text: 'Funding Opportunities: Potential coverage for up to 75% of costs.' },
+  { icon: '<i class="uil uil-award" style="color:#6f42c1;"></i>', text: '20+ Years of Experience in IT: Delivering solutions across multiple industries and challenges.' },
+  { icon: '<i class="uil uil-rocket" style="color:#FF9100;"></i>', text: 'End-to-End Execution: From planning to delivery, we\'ve got you covered.' },
+  { icon: '<i class="uil uil-lightbulb-alt" style="color:#FFD600;"></i>', text: 'Our Approach: From planning to deployment — we handle every step so you can focus on results.' },
+  { icon: '<i class="uil uil-server-network" style="color:#6f42c1;"></i>', text: 'Technology Stack: We use powerful Java and JavaScript frameworks with robust SQL and NoSQL databases, including communication.' }
     ];
     let overlayIndex = 0;
     let overlayTimeout;
