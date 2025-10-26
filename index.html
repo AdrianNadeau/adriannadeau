@@ -42,50 +42,7 @@
                 </li>
                 
               <li><a class="nav-link" href="#whyus" id="nav-whyus">Why Us?</a></li>
-              <li><a class="nav-link" href="#whatwedo" id="nav-whatwedo">What We Do</a></li>
-              <script>
-              // Smooth scroll for Why Us?, What We Do, and Services
-              document.addEventListener('DOMContentLoaded', function() {
-                var navWhyUs = document.getElementById('nav-whyus');
-                var navWhatWeDo = document.getElementById('nav-whatwedo');
-                var navServices = document.getElementById('nav-services');
-                // Why Us? scrolls to Why Choose Us?
-                var whyChooseUs = Array.from(document.querySelectorAll('span.underline-3')).find(function(el) {
-                  return el.textContent.trim() === 'Why Choose Us?';
-                });
-                if (navWhyUs && whyChooseUs) {
-                  navWhyUs.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    whyChooseUs.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  });
-                }
-                // What We Do scrolls to Our Services
-                var ourServices = Array.from(document.querySelectorAll('span.underline-3')).find(function(el) {
-                  return el.textContent.trim() === 'Our Services';
-                });
-                if (navWhatWeDo && ourServices) {
-                  navWhatWeDo.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    ourServices.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  });
-                }
-                // Services scrolls to Our Services
-                if (navServices && ourServices) {
-                  navServices.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    ourServices.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                  });
-                }
-                // Arrow up smooth scroll to top
-                var progressWrap = document.querySelector('.progress-wrap');
-                if (progressWrap) {
-                  progressWrap.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  });
-                }
-              });
-              </script>
+              <li><a class="nav-link" href="#ourservices" id="nav-whatwedo">What We Do</a></li>
                   
                 </li>
                 <li class="nav-item dropdown">
@@ -108,7 +65,7 @@
                   </div>
                 </li>
                  <li class="nav-item dropdown">
-                  <a class="nav-link" href="#" id="nav-services">Services</a>
+                  <a class="nav-link" href="#ourservices" id="nav-services">Services</a>
                  
                 </li>
                 <!-- <li class="nav-item dropdown">
@@ -166,3 +123,249 @@
       <!-- /.navbar -->
     </header>
     
+    <section class="wrapper bg-soft-primary">
+      <div class="container pt-10 pt-md-14 pb-14 pb-md-0">
+        <div class="row gx-md-8 gx-lg-12 gy-3 gy-lg-0 mb-13">
+          <div class="col-lg-6">
+            <h1 class="display-1 fs-66 lh-xxs mb-0">Smart Technology for <span class="underline-3 style-3 yellow">Smarter</span> Business.</h1>
+          </div>
+          <div class="col-lg-6">
+            <p class="lead fs-25 my-3">Unlock the power of smart technology to simplify your work, delight your customers, and grow your business with confidence.</p>
+          </div>
+        </div>
+        <div class="position-relative" style="margin-top: 2rem;">
+          <div class="shape bg-dot primary rellax w-17 h-21" data-rellax-speed="1" style="top: -2.5rem; right: -2.7rem;"></div>
+          <div class="video-overlay-container" style="position:relative;">
+            <video class="w-100 rounded animate__animated animate__fadeIn" autoplay muted loop style="object-fit: cover; height: 400px; animation-delay: 0.5s; animation-duration: 2s;">
+              <source src="./assets/img/servers-clip.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div id="overlay-bullet" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); min-width:300px; max-width:80%; background:rgba(0,0,0,0.55); color:#fff; padding:2rem 2.5rem; border-radius:2rem; box-shadow:0 4px 24px rgba(0,0,0,0.2); text-align:center; font-size:1.5rem; z-index:2;">
+              <span id="overlay-bullet-icon" style="font-size:2rem; margin-right:1rem;"></span>
+              <span id="overlay-bullet-text"></span>
+            </div>
+            <button id="overlay-prev" style="position:absolute; left:1rem; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.4); color:#fff; border:none; border-radius:50%; width:40px; height:40px; font-size:1.5rem; z-index:3; cursor:pointer;">&#8592;</button>
+            <button id="overlay-next" style="position:absolute; right:1rem; top:50%; transform:translateY(-50%); background:rgba(0,0,0,0.4); color:#fff; border:none; border-radius:50%; width:40px; height:40px; font-size:1.5rem; z-index:3; cursor:pointer;">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrapper bg-light">
+      <div class="container pt-7 pt-md-12 pb-14 pb-md-12">
+        <div class="row mb-4 text-center">
+          <div class="col-lg-8 col-xl-8 mx-auto">
+            <h3 id="whyus" class="text-uppercase display-4">
+              <span class="underline-3 style-3 yellow">Why Choose Us?</span>
+            </h3>
+            <div class="d-flex flex-column align-items-center mb-5">
+              <p style="font-size: 1.5em;">A.N. Software Services helps <strong>businesses of all sizes and non-profits</strong> get enterprise-grade project, integration & custom-software solutions <strong>without enterprise cost.</strong></p>
+              <ul class="icon-list bullet-bg bullet-soft-primary mb-0" style="text-align:left;">
+                <li style="text-align:left;"><span><i class="uil uil-trophy" style="color:#2979FF;margin-right:8px;"></i></span><span><strong>Results That Reward You:</strong> Our success is tied to yours — you only pay when we deliver.</span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-dollar-sign" style="color:#FFD600;margin-right:8px;"></i></span><span><strong>Smart Investment, Minimal Risk:</strong> Start strong with little to no upfront cost — keep your capital working for you. <a href="#">Apply here</a></span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-gift" style="color:#00C853;margin-right:8px;"></i></span><span><strong>Unlock Funding Support:</strong> Access programs that can cover up to 75% of your digital upgrade costs.</span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-award" style="color:#6f42c1;margin-right:8px;"></i></span><span><strong>Trusted Expertise:</strong> Over 20 years of delivering innovative IT solutions that drive real business growth.</span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-rocket" style="color:#FF9100;margin-right:8px;"></i></span><span><strong>Full-Service Execution:</strong> From planning to deployment — we handle every step so you can focus on results.</span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-lightbulb-alt" style="color:#FFD600;margin-right:8px;"></i></span><span><strong>Our Approach:</strong> From planning to deployment — we handle every step so you can focus on results.</span></li>
+                <li class="mt-3" style="text-align:left;"><span><i class="uil uil-server-network" style="color:#6f42c1;margin-right:8px;"></i></span><span><strong>Technology Stack:</strong>We use powerful Java and JavaScript frameworks with robust SQL and NoSQL databases — all backed by clear, consistent communication that keeps your project on track.</span></li>
+              </ul>
+            </div>
+          </div>
+          <h3 id="ourservices" style ="padding-top: 25px !important;padding-bottom:25px !important;" class="text-uppercase display-4">
+            <span class="underline-3 style-3 yellow">Our Services</span>
+          </h3>
+          <div style="padding-top:30px !important;" class="col-lg-6 order-lg-2 position-relative d-flex flex-column justify-content-start">
+            <div class="shape bg-dot primary rellax w-17 h-18" data-rellax-speed="1" style="bottom: -2rem; left: -0.7rem;"></div>
+            <figure class="rounded mb-0"><img style="max-height: 450px;width:100%;object-fit:cover;" src="./assets/img/photos/customized-dev.jpg" srcset="./assets/img/photos/customized-dev.jpg" alt="" /></figure>
+          </div>
+          <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-start">
+            <h3 class="display-6 mb-4" style="margin-top:0;">Customized Software</h3>
+            <p class="mb-5" style="margin-top:0;">At our core, we believe software should work the way you do. That's why we don't offer cookie-cutter solutions — we design and build customized software tailored to your exact goals, workflows, and business needs. Whether you're looking to automate daily operations, connect scattered systems, or create a seamless digital experience for your customers, we craft solutions that fit like a glove.</p>
+            <p style="margin-top:0;">From concept to launch, our team collaborates closely with you to ensure your software not only solves today's challenges but also grows with your business. With a blend of innovation, empathy, and technical expertise, we turn your ideas into intelligent, reliable, and future-ready software.</p>
+          </div>
+        </div>
+        <div class="row gx-lg-8 gx-xl-12 gy-10 align-items-start" style="margin-bottom: 4rem;">
+          <div class="col-lg-6 position-relative d-flex flex-column justify-content-start" style="overflow: hidden;">
+            <div class="shape rounded-circle bg-soft-primary rellax w-18 h-18" data-rellax-speed="1" style="bottom: -1rem; right: -1rem; z-index: -1;"></div>
+            <figure class="rounded mb-0"><img src="./assets/img/integration.png" srcset="./assets/img/photos/integration.png" alt=""  style="max-height: 400px;width:100%;object-fit:cover;" /></figure>
+          </div>
+          <div class="col-lg-6 d-flex flex-column justify-content-start">
+            <h3 class="display-6 mb-4" style="margin-top:0;">Integration</h3>
+            <p class="mb-5" style="margin-top:0;">Our Integration Services make your systems talk — seamlessly and securely. With powerful RESTful API connections, we help your platforms share data in real time and work together effortlessly.<br/><br/>Whether it's syncing customer data, automating workflows, or connecting third-party apps, our integrations are built for speed and scalability. Say goodbye to data silos and hello to smooth, connected operations that keep your business running smarter every day.</p>
+          </div>
+        </div>
+        <div class="row gx-lg-8 gx-xl-12 gy-10 mb-14 mb-md-17 align-items-start" style="margin-top: 5rem;">
+          <div class="row mb-6">
+            <div class="col-12 text-center">
+              <h3 id="solutions" class="text-uppercase display-4">
+                <span class="underline-3 style-3 yellow">We Deliver</span>
+              </h3>
+              <p class="lead mb-4">Just sit & relax while we take care of your business needs.</p>
+              <p class="mb-4">From tailored software development to seamless system integrations, our experts handle the heavy lifting so you can focus on what matters most: running your business. We combine innovation, reliability, and experience to deliver technology that works for you — not the other way around. Whether you need a custom app, smarter workflows, or enterprise-level performance on an SMB budget, we make it happen smoothly and stress-free.</p>
+              <div class="row justify-content-center mb-2">
+                <div class="col-auto">
+                  <div class="fs-40 fw-bold text-primary">2x</div>
+                  <div class="text-muted">Projects</div>
+                </div>
+                <div class="col-auto">
+                  <div class="fs-40 fw-bold text-primary">99.8%</div>
+                  <div class="text-muted">Customer Satisfaction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-navy text-inverse">
+      <div class="container py-13 py-md-15">
+        <div class="d-lg-flex flex-row align-items-lg-center">
+          <h3 class="display-4 mb-6 mb-lg-0 pe-lg-20 pe-xl-22 pe-xxl-25 text-white">Join our community by using our services and grow your business.</h3>
+        </div>
+      </div>
+    </footer>
+
+    <div class="progress-wrap">
+      <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/theme.js"></script>
+    <script>
+      // Overlay bullet points data
+      const overlayBullets = [
+        { icon: '<i class="uil uil-trophy" style="color:#2979FF;"></i>', text: 'Performance-First Model: We get paid when you\'re happy with the results: Win/Win.' },
+        { icon: '<i class="uil uil-dollar-sign" style="color:#FFD600;"></i>', text: 'Low or No Upfront Costs: Keep your cash flow free for other priorities.' },
+        { icon: '<i class="uil uil-gift" style="color:#00C853;"></i>', text: 'Funding Opportunities: Potential coverage for up to 75% of costs.' },
+        { icon: '<i class="uil uil-award" style="color:#6f42c1;"></i>', text: '20+ Years of Experience in IT: Delivering solutions across multiple industries and challenges.' },
+        { icon: '<i class="uil uil-rocket" style="color:#FF9100;"></i>', text: 'End-to-End Execution: From planning to delivery, we\'ve got you covered.' },
+        { icon: '<i class="uil uil-lightbulb-alt" style="color:#FFD600;"></i>', text: 'Our Approach: From planning to deployment — we handle every step so you can focus on results.' },
+        { icon: '<i class="uil uil-server-network" style="color:#6f42c1;"></i>', text: 'Technology Stack: We use powerful Java and JavaScript frameworks with robust SQL and NoSQL databases, including communication.' }
+      ];
+
+      let overlayIndex = 0;
+      let overlayTimeout;
+
+      function showOverlayBullet(idx, animate = true) {
+        const overlayDiv = document.getElementById('overlay-bullet');
+        const iconSpan = document.getElementById('overlay-bullet-icon');
+        const textSpan = document.getElementById('overlay-bullet-text');
+        if (!iconSpan || !textSpan || !overlayDiv) return;
+
+        iconSpan.innerHTML = overlayBullets[idx].icon;
+        textSpan.textContent = overlayBullets[idx].text;
+
+        if (animate) {
+          overlayDiv.style.opacity = 0;
+          overlayDiv.style.transform = 'translate(-30%, -50%)';
+          setTimeout(() => {
+            overlayDiv.style.transition = 'opacity 0.5s, transform 0.5s';
+            overlayDiv.style.opacity = 1;
+            overlayDiv.style.transform = 'translate(-50%, -50%)';
+          }, 50);
+          setTimeout(() => {
+            overlayDiv.style.transition = '';
+          }, 600);
+        }
+      }
+
+      function nextOverlayBullet() {
+        overlayIndex = (overlayIndex + 1) % overlayBullets.length;
+        showOverlayBullet(overlayIndex);
+        resetOverlayTimeout();
+      }
+
+      function prevOverlayBullet() {
+        overlayIndex = (overlayIndex - 1 + overlayBullets.length) % overlayBullets.length;
+        showOverlayBullet(overlayIndex);
+        resetOverlayTimeout();
+      }
+
+      function resetOverlayTimeout() {
+        clearTimeout(overlayTimeout);
+        overlayTimeout = setTimeout(nextOverlayBullet, 4000);
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        showOverlayBullet(overlayIndex);
+        resetOverlayTimeout();
+        document.getElementById('overlay-prev').onclick = prevOverlayBullet;
+        document.getElementById('overlay-next').onclick = nextOverlayBullet;
+      });
+
+      // Enhanced navigation smooth scroll functionality
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('Navigation script loaded');
+        
+        // Function to safely scroll to element with offset for fixed header
+        function scrollToElement(targetId, offset = 100) {
+          console.log('Attempting to scroll to:', targetId);
+          const target = document.getElementById(targetId);
+          if (target) {
+            console.log('Target found:', target);
+            const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+            return true;
+          } else {
+            console.log('Target not found:', targetId);
+          }
+          return false;
+        }
+
+        // Why Us? navigation - scrolls to "Why Choose Us?" section
+        const navWhyUs = document.getElementById('nav-whyus');
+        console.log('navWhyUs element:', navWhyUs);
+        if (navWhyUs) {
+          navWhyUs.addEventListener('click', function(e) {
+            console.log('Why Us clicked');
+            e.preventDefault();
+            scrollToElement('whyus', 100);
+          });
+        }
+
+        // What We Do navigation - scrolls to "Our Services" section
+        const navWhatWeDo = document.getElementById('nav-whatwedo');
+        console.log('navWhatWeDo element:', navWhatWeDo);
+        if (navWhatWeDo) {
+          navWhatWeDo.addEventListener('click', function(e) {
+            console.log('What We Do clicked');
+            e.preventDefault();
+            scrollToElement('ourservices', 100);
+          });
+        }
+
+        // Services navigation - also scrolls to "Our Services" section
+        const navServices = document.getElementById('nav-services');
+        console.log('navServices element:', navServices);
+        if (navServices) {
+          navServices.addEventListener('click', function(e) {
+            console.log('Services clicked');
+            e.preventDefault();
+            scrollToElement('ourservices', 100);
+          });
+        }
+
+        // Progress wrap scroll to top
+        const progressWrap = document.querySelector('.progress-wrap');
+        if (progressWrap) {
+          progressWrap.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+
+        // Test if target elements exist
+        console.log('whyus element:', document.getElementById('whyus'));
+        console.log('ourservices element:', document.getElementById('ourservices'));
+      });
+    </script>
+  </div>
+</body>
+
+</html>
