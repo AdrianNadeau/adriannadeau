@@ -11,8 +11,7 @@
     "express-ejs-layouts": "^2.5.1",
     "fs": "^0.0.1-security",
     "json2csv": "^6.0.0-alpha.2",
-    "puppeteer": "^24.22.0",
-  
+    "puppeteer": "^24.22.0"
   },
   "scripts": {
     "dev": "nodemon server.js",
